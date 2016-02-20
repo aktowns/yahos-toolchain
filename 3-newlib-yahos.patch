@@ -8503,8 +8503,8 @@ diff -urN -x autom4te.cache dist-newlib/newlib/libc/sys/yahos/Makefile.in source
 +.NOEXPORT:
 diff -urN -x autom4te.cache dist-newlib/newlib/libc/sys/yahos/syscalls.c source-newlib/newlib/libc/sys/yahos/syscalls.c
 --- dist-newlib/newlib/libc/sys/yahos/syscalls.c	1970-01-01 10:00:00.000000000 +1000
-+++ source-newlib/newlib/libc/sys/yahos/syscalls.c	2016-02-20 23:58:19.421164348 +1100
-@@ -0,0 +1,101 @@
++++ source-newlib/newlib/libc/sys/yahos/syscalls.c	2016-02-21 01:31:51.574259708 +1100
+@@ -0,0 +1,95 @@
 +#include <sys/stat.h>
 +#include <sys/types.h>
 +#include <sys/fcntl.h>
@@ -8598,11 +8598,5 @@ diff -urN -x autom4te.cache dist-newlib/newlib/libc/sys/yahos/syscalls.c source-
 +}
 +
 +int write(int file, char *ptr, int len) {
-+  int todo;
-+
-+  for (todo = 0; todo < len; todo++) {
-+    outbyte (*ptr++);
-+  }
-+  return len;
++  return 0;
 +}
-+//  int gettimeofday(struct timeval *__restrict __p, void *__restrict __tz);
