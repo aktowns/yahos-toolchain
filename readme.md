@@ -67,4 +67,4 @@ make install
 cd ..
 ```
 
-Congratulations, you can now hopefully compile applications for YahOS! using `i386-yahos-gcc` and friends.
+Congratulations, you can now hopefully compile applications for YahOS! using `i386-yahos-gcc` and friends, test it out by running make in this folder.
