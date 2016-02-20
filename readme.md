@@ -12,7 +12,7 @@ to set up the toolchain do something similar to the following:
 first lets export some envvars
 
 ```sh
-export TARGET=i386-yahos 
+export TARGET=i686-yahos 
 export PREFIX=/opt/yahos-toolchain
 ```
 
@@ -29,7 +29,7 @@ now lets build binutils targeted for i386-yahos
 
 ```sh
 mkdir binutils-build && cd binutils-build
-../binutils-2.26/configure -with-sysroot --disable-nls --disable-werror --target=$TARGET --prefix=$PREFIX
+../binutils-2.26/configure --with-sysroot --disable-nls --disable-werror --target=$TARGET --prefix=$PREFIX
 make
 make install
 cd ..
